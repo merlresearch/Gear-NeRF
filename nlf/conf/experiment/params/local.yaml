@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# Copyright (c) 2020 Quei-An Chen
+#
+# This source code is licensed under the MIT license found in the
+# LICENSES folder in the root directory of this source tree.
+# SPDX-License-Identifier: MIT
+# @package _group_
+
+tensor: True
+
+ckpt_dir: checkpoints
+log_dir: logs
+data_dir: /data/xliufe/Gear-NeRF/data
+name: "${experiment.dataset.name}_${experiment.dataset.collection}"
+
+print_loss: False
+save_results: True
+
+tensorboard: False
+log_images: False
+log_videos: False
+
+show_embedding: False
+
+test_only: False
+render_only: False
+load_from_weights: False
+start_epoch: 0
+
+seed: 1
+
+save_video_dir: "val_videos"
+save_image_dir: "val_images"
+
+input_pose: “”

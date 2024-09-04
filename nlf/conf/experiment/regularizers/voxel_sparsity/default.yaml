@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# Copyright (c) 2020 Quei-An Chen
+#
+# This source code is licensed under the MIT license found in the
+# LICENSES folder in the root directory of this source tree.
+# SPDX-License-Identifier: MIT
+# @package _group_
+
+type: voxel_sparsity
+ray_chunk: 32768
+batch_size: 32768
+use_inp_freq: inf
+
+weight:
+  type: exponential_decay
+  start: 0.01
+  decay: 0.5
+  num_epochs: 500
+
+loss:
+  type: mse

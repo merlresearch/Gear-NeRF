@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# Copyright (c) 2020 Quei-An Chen
+#
+# This source code is licensed under the MIT license found in the
+# LICENSES folder in the root directory of this source tree.
+# SPDX-License-Identifier: MIT
+# @package _group_
+
+name: catacaustics
+collection: compost
+data_subdir: catacaustics
+root_dir: "${experiment.params.data_dir}/${experiment.dataset.data_subdir}/${experiment.dataset.collection}/"
+
+img_wh: [1000, 666]
+spherical_poses: False
+use_ndc: False
+correct_poses: True
+
+val_num: 8
+val_skip: -1
+val_all: False
+
+render_params:
+  interpolate: False
+  supersample: 4
+  crop: 1.0

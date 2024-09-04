@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# Copyright (c) 2020 Quei-An Chen
+#
+# This source code is licensed under the MIT license found in the
+# LICENSES folder in the root directory of this source tree.
+# SPDX-License-Identifier: MIT
+# @package _group_
+
+name: stanford
+collection: gem
+data_subdir: stanford_half
+root_dir: "${experiment.params.data_dir}/${experiment.dataset.data_subdir}/${experiment.dataset.collection}/"
+
+img_wh:
+downsample: 1
+spherical_poses: False
+use_ndc: False
+
+val_pairs: []
+val_num: 8
+val_skip: 1
+
+render_params:
+  spiral: True
+  far: False
+  interpolate: False
+  supersample: 4
+  crop: 1.0
+
+  spiral_rad: 0.5
+  uv_downscale: 0.0
+
+lightfield:
+  rows: 17
+  cols: 17
+  step: 4
+  supersample: 2
+  disp_row: 8
+
+  use_file_coords: True
+  st_scale: 0.25
+  vis_st_scale:

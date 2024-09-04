@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# Copyright (c) 2020 Quei-An Chen
+#
+# This source code is licensed under the MIT license found in the
+# LICENSES folder in the root directory of this source tree.
+# SPDX-License-Identifier: MIT
+# @package _group_
+
+type: geometry
+ray_chunk: 32768
+batch_size: 8192
+
+fields: ['raw_points', 'raw_distance']
+origin: [0.0, 0.0, 0.0]
+num_points: -1
+
+contract:
+  type: mipnerf
+  contract_samples: True
+  contract_start_radius: 1.5
+  contract_end_radius: 6.0
+
+weight:
+  type: exponential_decay
+  start: 1.0
+  decay: 0.25
+  num_epochs: 50

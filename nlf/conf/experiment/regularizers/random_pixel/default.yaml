@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# Copyright (c) 2020 Quei-An Chen
+#
+# This source code is licensed under the MIT license found in the
+# LICENSES folder in the root directory of this source tree.
+# SPDX-License-Identifier: MIT
+# @package _group_
+
+type: teacher
+batch_size: 4096
+
+dataset:
+  name: random_pixel
+
+weight:
+  type: exponential_decay
+  start: 1.0
+  decay: 1.0
+  stop_epochs: 100
+  num_epochs: 100
+
+loss:
+  type: mse

@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# Copyright (c) 2020 Quei-An Chen
+#
+# This source code is licensed under the MIT license found in the
+# LICENSES folder in the root directory of this source tree.
+# SPDX-License-Identifier: MIT
+# @package _group_
+
+type: point
+ray_chunk: 32768
+batch_size: 8192
+
+weight:
+  type: exponential_decay
+  start: 0.2
+  decay: 0.1
+  num_epochs: 100
+
+loss:
+  type: mae
+  weight: 1.0
+  wait_iters: 0

@@ -1,0 +1,34 @@
+#!/usr/bin/env python
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# Copyright (c) 2020 Quei-An Chen
+#
+# This source code is licensed under the MIT license found in the
+# LICENSES folder in the root directory of this source tree.
+# SPDX-License-Identifier: MIT
+# @package _group_
+
+name: stanford_llff
+collection: tarot
+data_subdir: stanford
+root_dir: "${experiment.params.data_dir}/${experiment.dataset.data_subdir}/${experiment.dataset.collection}/"
+
+img_wh:
+spherical_poses: False
+use_ndc: False
+
+val_num: 8
+val_skip: 1
+val_pairs: []
+val_all: False
+
+val_set: lightfield
+lightfield_step: 1
+lightfield_rows: 17
+lightfield_cols: 17
+
+# Rendering
+render_params:
+  interpolate_time: False
+  interpolate: False
+  supersample: 4
+  crop: 1.0

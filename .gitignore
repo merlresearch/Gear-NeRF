@@ -1,0 +1,12 @@
+# Copyright (C) 2024 Mitsubishi Electric Research Laboratories (MERL)
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+.DS_Store
+.idea/
+*pycache*
+checkpoints/
+logs/
+outputs/
+pre_trained/
+*.pyc
+*.pdf

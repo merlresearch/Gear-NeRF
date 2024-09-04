@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# Copyright (c) 2020 Quei-An Chen
+#
+# This source code is licensed under the MIT license found in the
+# LICENSES folder in the root directory of this source tree.
+# SPDX-License-Identifier: MIT
+# @package _group_
+
+type: embedding
+
+run_on_test: False
+save_data: False
+
+no_over_fields: [raw_distance]
+
+fields:
+  distances:
+    use_abs: False
+    normalize: True
+
+  raw_distance:
+    use_abs: False
+    normalize: True
+    sort: True
+
+  point_offset:
+    use_abs: True
+    bounds: [0.0, 0.25]

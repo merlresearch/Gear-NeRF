@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# Copyright (c) 2024 Mitsubishi Electric Research Laboratories (MERL)
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-License-Identifier: MIT
+name: gearnerf
+channels:
+  - anaconda
+dependencies:
+  - matplotlib
+  - pillow
+  - scikit-image
+  - scipy
+  - python=3.8
